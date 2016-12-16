@@ -1,0 +1,3 @@
+<?php
+
+// life is good

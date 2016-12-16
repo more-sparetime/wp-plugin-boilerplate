@@ -1,0 +1,110 @@
+[
+    {
+        "name": "andreas-glaser/php-helpers",
+        "version": "1.0.5",
+        "version_normalized": "1.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/andreas-glaser/php-helpers.git",
+            "reference": "c11c55f9528048ac366881645177ccbcabfed4ff"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/andreas-glaser/php-helpers/zipball/c11c55f9528048ac366881645177ccbcabfed4ff",
+            "reference": "c11c55f9528048ac366881645177ccbcabfed4ff",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4"
+        },
+        "time": "2016-09-02 10:59:09",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "AndreasGlaser\\Helpers": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Glaser",
+                "email": "andreas.c.glaser@gmail.com",
+                "homepage": "http://andreas.glaser.me"
+            }
+        ],
+        "description": "A simple php library of various helper functions and classes.",
+        "homepage": "https://github.com/andreas-glaser/php-helpers",
+        "keywords": [
+            "helper",
+            "php"
+        ]
+    },
+    {
+        "name": "more-sparetime/wp-plugin-builder",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/more-sparetime/wp-plugin-builder.git",
+            "reference": "03db3ab2bcd10e508ee26ea4fee79ff818e228a4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/more-sparetime/wp-plugin-builder/zipball/03db3ab2bcd10e508ee26ea4fee79ff818e228a4",
+            "reference": "03db3ab2bcd10e508ee26ea4fee79ff818e228a4",
+            "shasum": ""
+        },
+        "require": {
+            "andreas-glaser/php-helpers": "^1",
+            "php": "^5.5||^7"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^5",
+            "symfony/var-dumper": "@stable"
+        },
+        "time": "2016-12-16 04:13:14",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.1-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "MoreSparetime\\WordPress\\PluginBuilder\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Andreas Glaser",
+                "email": "andreas.c.glaser@gmail.com",
+                "homepage": "http://andreas.glaser.me"
+            }
+        ],
+        "description": "Optimized, object oriented WordPress plugin builder library",
+        "homepage": "https://github.com/more-sparetime/wp-plugin-builder",
+        "keywords": [
+            "framework",
+            "php",
+            "plugin",
+            "wordpress"
+        ]
+    }
+]

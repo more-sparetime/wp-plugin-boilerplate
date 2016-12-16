@@ -1,0 +1,6 @@
+{
+  "require": {
+    "more-sparetime/wp-plugin-builder": "dev-master",
+    "andreas-glaser/php-helpers": "^1"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "andreas-glaser/php-helpers",
+  "description": "A simple php library of various helper functions and classes.",
+  "keywords": [
+    "php",
+    "helper"
+  ],
+  "homepage": "https://github.com/andreas-glaser/php-helpers",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreas Glaser",
+      "email": "andreas.c.glaser@gmail.com",
+      "homepage": "http://andreas.glaser.me"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4"
+  },
+  "suggest": {},
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-0": {
+      "AndreasGlaser\\Helpers": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
