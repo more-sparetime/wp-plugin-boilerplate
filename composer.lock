@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/more-sparetime/wp-plugin-builder.git",
-                "reference": "e9286e53f810472b7f691875cf494b487fa06ad7"
+                "reference": "bfdeaa2c3472410b464d21da0d03e67a7f8f63d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/more-sparetime/wp-plugin-builder/zipball/e9286e53f810472b7f691875cf494b487fa06ad7",
-                "reference": "e9286e53f810472b7f691875cf494b487fa06ad7",
+                "url": "https://api.github.com/repos/more-sparetime/wp-plugin-builder/zipball/bfdeaa2c3472410b464d21da0d03e67a7f8f63d6",
+                "reference": "bfdeaa2c3472410b464d21da0d03e67a7f8f63d6",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2016-12-16 05:25:45"
+            "time": "2016-12-16 06:44:15"
         }
     ],
     "packages-dev": [],
