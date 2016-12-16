@@ -98,10 +98,10 @@ class ClassLoader
     }
 
     /**
-     * Registers a set of PSR-0 directories for a given prefix, either
-     * appending or prepending to the ones previously set for this prefix.
+     * Registers a set of PSR-0 directories for a given slug, either
+     * appending or prepending to the ones previously set for this slug.
      *
-     * @param string       $prefix  The prefix
+     * @param string       $prefix  The slug
      * @param array|string $paths   The PSR-0 root directories
      * @param bool         $prepend Whether to prepend the directories
      */
@@ -146,7 +146,7 @@ class ClassLoader
      * Registers a set of PSR-4 directories for a given namespace, either
      * appending or prepending to the ones previously set for this namespace.
      *
-     * @param string       $prefix  The prefix/namespace, with trailing '\\'
+     * @param string       $prefix  The slug/namespace, with trailing '\\'
      * @param array|string $paths   The PSR-4 base directories
      * @param bool         $prepend Whether to prepend the directories
      *
@@ -171,7 +171,7 @@ class ClassLoader
             // Register directories for a new namespace.
             $length = strlen($prefix);
             if ('\\' !== $prefix[$length - 1]) {
-                throw new \InvalidArgumentException("A non-empty PSR-4 prefix must end with a namespace separator.");
+                throw new \InvalidArgumentException("A non-empty PSR-4 slug must end with a namespace separator.");
             }
             $this->prefixLengthsPsr4[$prefix[0]][$prefix] = $length;
             $this->prefixDirsPsr4[$prefix] = (array) $paths;
@@ -191,10 +191,10 @@ class ClassLoader
     }
 
     /**
-     * Registers a set of PSR-0 directories for a given prefix,
-     * replacing any others previously set for this prefix.
+     * Registers a set of PSR-0 directories for a given slug,
+     * replacing any others previously set for this slug.
      *
-     * @param string       $prefix The prefix
+     * @param string       $prefix The slug
      * @param array|string $paths  The PSR-0 base directories
      */
     public function set($prefix, $paths)
@@ -210,7 +210,7 @@ class ClassLoader
      * Registers a set of PSR-4 directories for a given namespace,
      * replacing any others previously set for this namespace.
      *
-     * @param string       $prefix The prefix/namespace, with trailing '\\'
+     * @param string       $prefix The slug/namespace, with trailing '\\'
      * @param array|string $paths  The PSR-4 base directories
      *
      * @throws \InvalidArgumentException
@@ -222,7 +222,7 @@ class ClassLoader
         } else {
             $length = strlen($prefix);
             if ('\\' !== $prefix[$length - 1]) {
-                throw new \InvalidArgumentException("A non-empty PSR-4 prefix must end with a namespace separator.");
+                throw new \InvalidArgumentException("A non-empty PSR-4 slug must end with a namespace separator.");
             }
             $this->prefixLengthsPsr4[$prefix[0]][$prefix] = $length;
             $this->prefixDirsPsr4[$prefix] = (array) $paths;
@@ -251,7 +251,7 @@ class ClassLoader
     }
 
     /**
-     * Turns off searching the prefix and fallback directories for classes
+     * Turns off searching the slug and fallback directories for classes
      * that have not been registered with the class map.
      *
      * @param bool $classMapAuthoritative
