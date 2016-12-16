@@ -10,12 +10,11 @@
  * Text Domain:       wp-plugin-boilerplate
  * Domain Path:       /assets/languages
 */
-error_reporting(E_ALL);
 
-global $wpdb;
+use MoreSparetime\WordPress\PluginBuilder\Plugin;
 
-if (!defined('WPINC')) {
-    die;
-}
+require_once 'autoloader.php';
 
-require_once 'vendor/autoload.php';
+$plugin = new Plugin('wp-plugin-boilerplate');
+
+//$plugin->shortcode('test-shortcode');
