@@ -11,6 +11,8 @@
  * Domain Path:       /assets/languages
 */
 
+use MoreSparetime\WordPress\PluginBuilder\Admin\Menu\Menu;
+use MoreSparetime\WordPress\PluginBuilder\Admin\Page;
 use MoreSparetime\WordPress\PluginBuilder\Plugin;
 use Plugin\Controllers;
 
@@ -21,6 +23,13 @@ require_once 'autoloader.php';
 $plugin = new Plugin('wp-plugin-boilerplate', [
     'views_dir' => __DIR__ . '/src/Views',
 ]);
+
+// ADMIN PAGE / Menu
+// see https://codex.wordpress.org/Shortcode
+
+$pageHelp = new Page($plugin, 'help', 'Help', $plugin->controller(Controllers\Page\Example::class, 'help'));
+$topMenu = new Menu($pageHelp, 'WP-BP');
+$plugin->addMenu($topMenu);
 
 // SHORT CODES
 // see https://codex.wordpress.org/Shortcode

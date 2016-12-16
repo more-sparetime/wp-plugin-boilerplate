@@ -12,8 +12,12 @@ use MoreSparetime\WordPress\PluginBuilder\Controller\Controller;
  */
 class Example extends Controller
 {
-    public function test1(array $data)
+    public function help()
     {
+        $viewData = [
+            'title' => $this->plugin->t('Help'),
+        ];
 
+        echo $this->plugin->view('Page/Example/help.html.php', $viewData);
     }
 }

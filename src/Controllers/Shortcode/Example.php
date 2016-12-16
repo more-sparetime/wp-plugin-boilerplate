@@ -14,6 +14,10 @@ class Example extends Controller
 {
     public function test1(array $data)
     {
+        $viewData = [
+            'subTitle' => 'This is great',
+        ];
 
+        echo $this->plugin->view('Shortcode/Example/test1.html.php', $viewData);
     }
 }
