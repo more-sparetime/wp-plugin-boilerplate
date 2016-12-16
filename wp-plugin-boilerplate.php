@@ -5,7 +5,7 @@
  * Plugin URI:        https://github.com/more-sparetime/wp-plugin-boilerplate
  * Description:       https://github.com/more-sparetime/wp-plugin-boilerplate
  * Author:            https://github.com/more-sparetime
- * Version:           0.0.1
+ * Version:           0.0.0
  * Author URI:        https://github.com/more-sparetime
  * Text Domain:       wp-plugin-boilerplate
  * Domain Path:       /assets/languages
