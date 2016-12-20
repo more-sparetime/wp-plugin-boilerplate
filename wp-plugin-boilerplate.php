@@ -21,15 +21,23 @@ require_once 'autoloader.php';
 // YOUR CODES BELOW THIS LINE... have fun :)
 
 $plugin = new Plugin('wp-plugin-boilerplate', [
-    'views_dir' => __DIR__ . '/src/Views',
+    'views_dir'  => __DIR__ . '/src/Views',
+    'assets_dir' => __DIR__ . '/assets',
 ]);
 
-// ADMIN PAGE / Menu
+// ADMIN PAGE / MENU
 // see https://codex.wordpress.org/Shortcode
 
 $pageHelp = new Page($plugin, 'help', 'Help', $plugin->controller(Controllers\Page\Example::class, 'help'));
 $topMenu = new Menu($pageHelp, 'WP-BP');
 $plugin->addMenu($topMenu);
+
+// ADD JS/CSS FILES
+// see https://developer.wordpress.org/themes/basics/including-css-javascript/
+
+$plugin->addCss('my-css', plugins_url('assets/css/styles.css', __FILE__));
+$plugin->addJsHeader('my-js-header', plugins_url('assets/js/scripts-header.js', __FILE__));
+$plugin->addJsFooter('my-js-footer', plugins_url('assets/js/scripts-footer.js', __FILE__), ['jquery']);
 
 // SHORT CODES
 // see https://codex.wordpress.org/Shortcode
