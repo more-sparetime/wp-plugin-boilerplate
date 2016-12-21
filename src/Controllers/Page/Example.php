@@ -22,6 +22,15 @@ class Example extends Controller
         echo $this->plugin->view('Page/Example/dashboard.html.php', $viewData);
     }
 
+    public function profiler()
+    {
+        $viewData = [
+            'title' => $this->plugin->t('Profiler'),
+        ];
+
+        echo $this->plugin->view('Page/Example/profiler.html.php', $viewData);
+    }
+
     /**
      * @author Andreas Glaser
      */
@@ -39,7 +48,9 @@ class Example extends Controller
      */
     public function ajaxCalls()
     {
-        $viewData = [];
+        $viewData = [
+            'title' => "Ajax Calls"
+        ];
 
         echo $this->plugin->view('Page/Example/ajax_calls.html.php', $viewData);
     }

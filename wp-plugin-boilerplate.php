@@ -30,12 +30,16 @@ $plugin = new Plugin('wp-plugin-boilerplate', [
 // see https://codex.wordpress.org/Shortcode
 
 $pageDashboard = new Page($plugin, 'dashboard-url', 'Dashboard', $plugin->controller(Controllers\Page\Example::class, 'dashboard'));
+$pageProfiler = new Page($plugin, 'profiler', 'Profiler', $plugin->controller(Controllers\Page\Example::class, 'profiler'));
 $pageShortcodes = new Page($plugin, 'shortcodes', 'Shortcodes', $plugin->controller(Controllers\Page\Example::class, 'shortcodes'));
+$pageAjaxCalls = new Page($plugin, 'ajax-calls', "Ajax Calls", $plugin->controller(Controllers\Page\Example::class, 'ajaxCalls'));
 $pageHelp = new Page($plugin, 'help', 'Help', $plugin->controller(Controllers\Page\Example::class, 'help'));
 
 $topMenu = new Menu($pageDashboard, 'WP-PBP');
 
+$topMenu->addSubMenu(new SubMenu($topMenu, $pageProfiler, 'Profiler'));
 $topMenu->addSubMenu(new SubMenu($topMenu, $pageShortcodes, 'Shortcodes'));
+$topMenu->addSubMenu(new SubMenu($topMenu, $pageAjaxCalls, 'Ajax Calls'));
 $topMenu->addSubMenu(new SubMenu($topMenu, $pageHelp, 'Help'));
 
 $plugin->addMenu($topMenu);
@@ -51,6 +55,11 @@ $plugin->addJsFooter('my-js-footer', plugins_url('assets/js/scripts-footer.js', 
 // see https://codex.wordpress.org/Shortcode
 
 $plugin->shortcode('test-shortcode', $plugin->controller(Controllers\Cron\Example::class, 'test1'));
+
+// AJAX CALLS
+// see https://codex.wordpress.org/AJAX_in_Plugins
+
+$plugin->ajaxCallInternal('getRandomNumber', $plugin->controller(Controllers\Ajax\Internal\Example::class, 'getRandomNumber'));
 
 // CRONS
 // see https://developer.wordpress.org/plugins/cron/
