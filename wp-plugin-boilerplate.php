@@ -29,11 +29,14 @@ $plugin = new Plugin('wp-plugin-boilerplate', [
 // ADMIN PAGE / MENU
 // see https://codex.wordpress.org/Shortcode
 
-$pageHelp = new Page($plugin, 'help', 'Help', $plugin->controller(Controllers\Page\Example::class, 'help'));
-$topMenu = new Menu($pageHelp, 'WP-BP');
-
+$pageDashboard = new Page($plugin, 'dashboard-url', 'Dashboard', $plugin->controller(Controllers\Page\Example::class, 'dashboard'));
 $pageShortcodes = new Page($plugin, 'shortcodes', 'Shortcodes', $plugin->controller(Controllers\Page\Example::class, 'shortcodes'));
+$pageHelp = new Page($plugin, 'help', 'Help', $plugin->controller(Controllers\Page\Example::class, 'help'));
+
+$topMenu = new Menu($pageDashboard, 'WP-PBP');
+
 $topMenu->addSubMenu(new SubMenu($topMenu, $pageShortcodes, 'Shortcodes'));
+$topMenu->addSubMenu(new SubMenu($topMenu, $pageHelp, 'Help'));
 
 $plugin->addMenu($topMenu);
 

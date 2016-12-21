@@ -12,6 +12,19 @@ use MoreSparetime\WordPress\PluginBuilder\Controller\Controller;
  */
 class Example extends Controller
 {
+    /**
+     * @author Andreas Glaser
+     */
+    public function dashboard()
+    {
+        $viewData = [];
+
+        echo $this->plugin->view('Page/Example/dashboard.html.php', $viewData);
+    }
+
+    /**
+     * @author Andreas Glaser
+     */
     public function help()
     {
         $viewData = [
@@ -21,6 +34,9 @@ class Example extends Controller
         echo $this->plugin->view('Page/Example/help.html.php', $viewData);
     }
 
+    /**
+     * @author Andreas Glaser
+     */
     public function ajaxCalls()
     {
         $viewData = [];
@@ -28,6 +44,9 @@ class Example extends Controller
         echo $this->plugin->view('Page/Example/ajax_calls.html.php', $viewData);
     }
 
+    /**
+     * @author Andreas Glaser
+     */
     public function shortcodes()
     {
         $viewData = [];
