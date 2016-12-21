@@ -20,4 +20,18 @@ class Example extends Controller
 
         echo $this->plugin->view('Page/Example/help.html.php', $viewData);
     }
+
+    public function ajaxCalls()
+    {
+        $viewData = [];
+
+        echo $this->plugin->view('Page/Example/ajax_calls.html.php', $viewData);
+    }
+
+    public function shortcodes()
+    {
+        $viewData = [];
+
+        echo $this->plugin->view('Page/Example/shortcodes.html.php', $viewData);
+    }
 }

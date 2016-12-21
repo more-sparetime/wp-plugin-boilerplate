@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "andreas-glaser/php-helpers",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreas-glaser/php-helpers.git",
-                "reference": "c11c55f9528048ac366881645177ccbcabfed4ff"
+                "reference": "f0a77759a2ee4fe1a0cb9ba16a5a0f7e79e0cac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreas-glaser/php-helpers/zipball/c11c55f9528048ac366881645177ccbcabfed4ff",
-                "reference": "c11c55f9528048ac366881645177ccbcabfed4ff",
+                "url": "https://api.github.com/repos/andreas-glaser/php-helpers/zipball/f0a77759a2ee4fe1a0cb9ba16a5a0f7e79e0cac3",
+                "reference": "f0a77759a2ee4fe1a0cb9ba16a5a0f7e79e0cac3",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "helper",
                 "php"
             ],
-            "time": "2016-09-02 10:59:09"
+            "time": "2016-12-20 10:30:25"
         },
         {
             "name": "more-sparetime/wp-plugin-builder",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/more-sparetime/wp-plugin-builder.git",
-                "reference": "bfdeaa2c3472410b464d21da0d03e67a7f8f63d6"
+                "reference": "75c5c1bdc69ad20047a341ac861e83f83697a397"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/more-sparetime/wp-plugin-builder/zipball/bfdeaa2c3472410b464d21da0d03e67a7f8f63d6",
-                "reference": "bfdeaa2c3472410b464d21da0d03e67a7f8f63d6",
+                "url": "https://api.github.com/repos/more-sparetime/wp-plugin-builder/zipball/75c5c1bdc69ad20047a341ac861e83f83697a397",
+                "reference": "75c5c1bdc69ad20047a341ac861e83f83697a397",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2016-12-16 06:44:15"
+            "time": "2016-12-21 16:28:24"
         }
     ],
     "packages-dev": [],

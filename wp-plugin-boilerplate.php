@@ -12,6 +12,7 @@
 */
 
 use MoreSparetime\WordPress\PluginBuilder\Admin\Menu\Menu;
+use MoreSparetime\WordPress\PluginBuilder\Admin\Menu\SubMenu;
 use MoreSparetime\WordPress\PluginBuilder\Admin\Page;
 use MoreSparetime\WordPress\PluginBuilder\Plugin;
 use Plugin\Controllers;
@@ -30,6 +31,10 @@ $plugin = new Plugin('wp-plugin-boilerplate', [
 
 $pageHelp = new Page($plugin, 'help', 'Help', $plugin->controller(Controllers\Page\Example::class, 'help'));
 $topMenu = new Menu($pageHelp, 'WP-BP');
+
+$pageShortcodes = new Page($plugin, 'shortcodes', 'Shortcodes', $plugin->controller(Controllers\Page\Example::class, 'shortcodes'));
+$topMenu->addSubMenu(new SubMenu($topMenu, $pageShortcodes, 'Shortcodes'));
+
 $plugin->addMenu($topMenu);
 
 // ADD JS/CSS FILES
