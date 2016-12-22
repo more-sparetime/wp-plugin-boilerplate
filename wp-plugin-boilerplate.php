@@ -60,6 +60,7 @@ $plugin->shortcode('test-shortcode', $plugin->controller(Controllers\Cron\Exampl
 // see https://codex.wordpress.org/AJAX_in_Plugins
 
 $plugin->ajaxCallInternal('getRandomNumber', $plugin->controller(Controllers\Ajax\Internal\Example::class, 'getRandomNumber'));
+$plugin->ajaxCallInternal('testError', $plugin->controller(Controllers\Ajax\Internal\Example::class, 'testError'));
 
 // CRONS
 // see https://developer.wordpress.org/plugins/cron/
