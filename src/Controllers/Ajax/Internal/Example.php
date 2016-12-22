@@ -29,11 +29,7 @@ class Example extends Controller
      */
     public function testError()
     {
-        if (1 !== 2) {
-            $this->addError('The world is soon coming to an end...', 'request-validation', ['info' => '1 should never be equal to 2']);
-        } else {
-            wp_send_json_success(['All is well']);
-        }
+        $this->addError('The world is soon coming to an end...', 'request-validation', ['info' => 'Programming is so much fun']);
 
         if ($errors = $this->getErrors()) {
             wp_send_json_error($errors);
