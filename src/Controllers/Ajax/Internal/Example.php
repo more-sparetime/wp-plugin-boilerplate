@@ -31,12 +31,15 @@ class Example extends Controller
     {
         if (1 !== 2) {
             $this->addError('The world is soon coming to an end...', 'request-validation', ['info' => '1 should never be equal to 2']);
+        } else {
+            wp_send_json_success(['All is well']);
         }
 
         if ($errors = $this->getErrors()) {
             wp_send_json_error($errors);
         }
 
-        wp_send_json_success(['All is well']);
+        // this line should never be reached
+        wp_send_json([]);
     }
 }
