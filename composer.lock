@@ -9,33 +9,33 @@
     "packages": [
         {
             "name": "andreas-glaser/php-helpers",
-            "version": "1.0.6",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andreas-glaser/php-helpers.git",
-                "reference": "f0a77759a2ee4fe1a0cb9ba16a5a0f7e79e0cac3"
+                "reference": "5e933233e6dda14478ea24cb2d51f001b3deebc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andreas-glaser/php-helpers/zipball/f0a77759a2ee4fe1a0cb9ba16a5a0f7e79e0cac3",
-                "reference": "f0a77759a2ee4fe1a0cb9ba16a5a0f7e79e0cac3",
+                "url": "https://api.github.com/repos/andreas-glaser/php-helpers/zipball/5e933233e6dda14478ea24cb2d51f001b3deebc0",
+                "reference": "5e933233e6dda14478ea24cb2d51f001b3deebc0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": "^7"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4"
+                "phpunit/phpunit": "^5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "AndreasGlaser\\Helpers": "src/"
+                "psr-4": {
+                    "AndreasGlaser\\Helpers\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -45,8 +45,8 @@
             "authors": [
                 {
                     "name": "Andreas Glaser",
-                    "email": "andreas.c.glaser@gmail.com",
-                    "homepage": "http://andreas.glaser.me"
+                    "email": "andreas.glaser@protonmail.com",
+                    "homepage": "https://andreas.glaser.me"
                 }
             ],
             "description": "A simple php library of various helper functions and classes.",
@@ -55,7 +55,7 @@
                 "helper",
                 "php"
             ],
-            "time": "2016-12-20 10:30:25"
+            "time": "2016-12-29 06:48:50"
         },
         {
             "name": "more-sparetime/wp-plugin-builder",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/more-sparetime/wp-plugin-builder.git",
-                "reference": "75c5c1bdc69ad20047a341ac861e83f83697a397"
+                "reference": "24ed88cd79dd66caadf62e9ca8bb7620031ffe02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/more-sparetime/wp-plugin-builder/zipball/75c5c1bdc69ad20047a341ac861e83f83697a397",
-                "reference": "75c5c1bdc69ad20047a341ac861e83f83697a397",
+                "url": "https://api.github.com/repos/more-sparetime/wp-plugin-builder/zipball/24ed88cd79dd66caadf62e9ca8bb7620031ffe02",
+                "reference": "24ed88cd79dd66caadf62e9ca8bb7620031ffe02",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2016-12-21 16:28:24"
+            "time": "2016-12-29 07:43:58"
         }
     ],
     "packages-dev": [],

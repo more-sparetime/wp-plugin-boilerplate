@@ -3,7 +3,6 @@
 namespace Plugin\Controllers\Cron;
 
 use MoreSparetime\WordPress\PluginBuilder\Controller\Controller;
-use MoreSparetime\WordPress\PluginBuilder\Shortcode\Shortcode;
 
 /**
  * Class Example
@@ -14,18 +13,26 @@ use MoreSparetime\WordPress\PluginBuilder\Shortcode\Shortcode;
 class Example extends Controller
 {
     /**
-     * @param \MoreSparetime\WordPress\PluginBuilder\Shortcode\Shortcode $shortcode
-     * @param array                                                      $attributes
-     * @param string                                                     $content
-     *
      * @author Andreas Glaser
      */
-    public function test1(Shortcode $shortcode, array $attributes, $content)
+    public function hourly()
     {
-        $viewData = [
-            'subTitle' => 'This is great',
-        ];
+        global $wpdb;
 
-        echo $this->plugin->view('Shortcode/Example/test1.html.php', $viewData);
+        // run some database updates or query external REST apis... anything goes
+
+        //$wpdb->update('my_table', ['updated_at' => date('Y-m-d H:i:s'), ['id' => 123]]);
+    }
+
+    /**
+     * @author Andreas Glaser
+     */
+    public function daily()
+    {
+        global $wpdb;
+
+        // run some database updates or query external REST apis... anything goes
+
+        //$wpdb->update('my_table', ['updated_at' => date('Y-m-d H:i:s'), ['id' => 123]]);
     }
 }

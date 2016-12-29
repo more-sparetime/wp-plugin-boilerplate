@@ -30,7 +30,7 @@
 
         jQuery("#rndButton").click(function () {
             jQuery.post(ajaxurl, {
-                action: "wp-plugin-boilerplate_getRandomNumber"
+                action: "my-prefix_getRandomNumber"
             })
                 .done(function (response) {
                     if (response.success) {
@@ -46,7 +46,7 @@
             .find('button')
             .click(function () {
                 jQuery.post(ajaxurl, {
-                    action: 'wp-plugin-boilerplate_testError'
+                    action: 'my-prefix_testError'
                 })
                     .done(function (response) {
                         for (var i in response.data) {

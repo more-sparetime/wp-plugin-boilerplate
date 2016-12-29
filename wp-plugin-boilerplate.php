@@ -19,15 +19,12 @@ use Plugin\Controllers;
 
 require_once 'autoloader.php';
 
-// YOUR CODES BELOW THIS LINE... have fun :)
-
-$plugin = new Plugin('wp-plugin-boilerplate', [
+$plugin = new Plugin('my-prefix', [
     'views_dir'  => __DIR__ . '/src/Views',
     'assets_dir' => __DIR__ . '/assets',
 ]);
 
 // ADMIN PAGE / MENU
-// see https://codex.wordpress.org/Shortcode
 
 $pageDashboard = new Page($plugin, 'dashboard-url', 'Dashboard', $plugin->controller(Controllers\Page\Example::class, 'dashboard'));
 $pageProfiler = new Page($plugin, 'profiler', 'Profiler', $plugin->controller(Controllers\Page\Example::class, 'profiler'));
@@ -45,26 +42,46 @@ $topMenu->addSubMenu(new SubMenu($topMenu, $pageHelp, 'Help'));
 $plugin->addMenu($topMenu);
 
 // ADD JS/CSS FILES
-// see https://developer.wordpress.org/themes/basics/including-css-javascript/
 
 $plugin->addCss('my-css', plugins_url('assets/css/styles.css', __FILE__));
 $plugin->addJsHeader('my-js-header', plugins_url('assets/js/scripts-header.js', __FILE__));
 $plugin->addJsFooter('my-js-footer', plugins_url('assets/js/scripts-footer.js', __FILE__), ['jquery']);
 
 // SHORT CODES
-// see https://codex.wordpress.org/Shortcode
 
 $plugin->shortcode('test-shortcode', $plugin->controller(Controllers\Cron\Example::class, 'test1'));
 
 // AJAX CALLS
-// see https://codex.wordpress.org/AJAX_in_Plugins
 
 $plugin->ajaxCallInternal('getRandomNumber', $plugin->controller(Controllers\Ajax\Internal\Example::class, 'getRandomNumber'));
 $plugin->ajaxCallInternal('testError', $plugin->controller(Controllers\Ajax\Internal\Example::class, 'testError'));
 
 // CRONS
-// see https://developer.wordpress.org/plugins/cron/
 
-//$plugin->cron('test-shortcode', $plugin->controller(Controllers\Cron\Example::class, 'test1'));
+$plugin->cron('test-hourly', $plugin->controller(Controllers\Cron\Example::class, 'hourly'), 'hourly');
+$plugin->cron('test-daily', $plugin->controller(Controllers\Cron\Example::class, 'daily'), 'daily');
 
+// WORK WITH HOOKS
+
+$plugin->addAction('save_post', function ($postId) {
+    // send an email or do something exciting
+});
+
+// CUSTOM HOOKS
+
+$plugin->addActionCustom('subtract', function () {
+    $data = func_get_arg(0);
+    $result = $data[0] - $data[1];
+    // do something with the result
+});
+
+$plugin->triggerActionCustom('subtract', [10, 8]);
+
+$plugin->addActionCustomWithDefault('divide', function () {
+    $data = func_get_arg(0);
+    $result = $data[0] / $data[1];
+    // do something with the result
+}, [10, 5]);
+
+// CONNECT ALL LAZY HOOKS
 $plugin->attachHooks();
