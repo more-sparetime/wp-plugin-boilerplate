@@ -83,8 +83,10 @@ $plugin->addActionCustomWithDefault('divide', function () {
     // do something with the result
 }, [10, 5]);
 
-// Custom Widgets
-$plugin->addWidget('Example_Widget');
+// CUSTOM WIDGETS
+
+$plugin->addWidget(\Plugin\Widgets\ExampleWidget::class);
 
 // CONNECT ALL LAZY HOOKS
+
 $plugin->attachHooks();
